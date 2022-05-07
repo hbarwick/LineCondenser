@@ -4,12 +4,19 @@ namespace LineCondenser.ViewModel
 {
     public class TextConvertViewModel : INotifyPropertyChanged
     {
-        private string? LeftDelimiter { get; set; }
+        private string? leftDelimiter;
         private string? RightDelimiter { get; set; }
         private string? Separator { get; set; }
         private string? LineStart { get; set; }
         private string? LineEnd { get; set; }
         private string? TextEntry { get; set; }
+
+        public string LeftDelimiter
+        {
+            get { return leftDelimiter; }
+            set { leftDelimiter = value ?? ""; }
+        }
+        
 
         public TextConvertViewModel(string left, string right, string sep, string start, string end, string text)
         {

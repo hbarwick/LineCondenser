@@ -29,7 +29,10 @@ namespace LineCondenser.WPF
 
         }
 
-
+        public void TextChanged(object sender, TextChangedEventArgs args)
+        {
+            Console.WriteLine("Got one thing working");
+        }
 
         private void CopyButton_Click(object sender, RoutedEventArgs e)
         {
