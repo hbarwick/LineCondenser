@@ -12,9 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TextConverter.ViewModel;
+using LineCondenser.ViewModel;
 
-namespace TextConverter
+namespace LineCondenser.WPF
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,13 +24,14 @@ namespace TextConverter
         public MainWindow()
         {
             InitializeComponent();
-            TextConvertViewModel Converter = new TextConvertViewModel();
+            TextConvertViewModel Converter = new TextConvertViewModel(leftDelimiter.Text, rightDelimiter.Text, separator.Text, lineStart.Text, lineEnd.Text, textEntry.Text);
         }
+
 
 
         private void CopyButton_Click(object sender, RoutedEventArgs e)
         {
-            Converter.ProcessText()
+            //Converter.ProcessText();
         }
     }
 }

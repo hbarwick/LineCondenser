@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace TextConverter.ViewModel
+namespace LineCondenser.ViewModel
 {
     public class TextConvertViewModel : INotifyPropertyChanged
     {
@@ -11,18 +11,27 @@ namespace TextConverter.ViewModel
         private string? LineEnd { get; set; }
         private string? TextEntry { get; set; }
 
-
+        public TextConvertViewModel(string left, string right, string sep, string start, string end, string text)
+        {
+            LeftDelimiter = left;
+            RightDelimiter = right; 
+            Separator = sep;
+            LineStart = start;
+            LineEnd = end;
+            TextEntry = text;
+        }
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
         public string ProcessText()
         {
-            string[] lines = TextEntry.Split
+            throw new NotImplementedException();
+            //string[] lines = TextEntry.Split
 
-            string result;
+            //string result;
 
 
-            return result;
+            //return result;
         }
     }
 }
