@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LineCondenser.WPF"
         mc:Ignorable="d"
-        Title="Names" Height="556" Width="434">
+        Title="Line formatter" Height="556" Width="434">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="487*"/>
