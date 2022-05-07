@@ -30,11 +30,11 @@
                 <Label Height="33" Margin="0,10,0,0" FontSize="15">Line End</Label>
             </StackPanel>
             <StackPanel Grid.Column="1">
-                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding LeftDelimiter, UpdateSourceTrigger=PropertyChanged, FallbackValue='A'}" VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" TextChanged="TextChanged"/>
-                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding RightDelimiter, UpdateSourceTrigger=PropertyChanged, FallbackValue='A'}" VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" x:Name="rightDelimiter"/>
-                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding Separator, UpdateSourceTrigger=PropertyChanged, FallbackValue='A'}" VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" x:Name="separator"/>
-                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding LineStart, UpdateSourceTrigger=PropertyChanged, FallbackValue='A'}" VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" x:Name="lineStart"/>
-                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding LineEnd, UpdateSourceTrigger=PropertyChanged, FallbackValue='A'}" VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" x:Name="lineEnd"/>
+                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding LeftDelimiter, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" />
+                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding RightDelimiter, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" x:Name="rightDelimiter"/>
+                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding Separator, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" x:Name="separator"/>
+                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding LineStart, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" x:Name="lineStart"/>
+                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding LineEnd, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" x:Name="lineEnd"/>
             </StackPanel>
             <Button Grid.Row="1" Click="CopyButton_Click">Copy to Clipboard</Button>
         </Grid>

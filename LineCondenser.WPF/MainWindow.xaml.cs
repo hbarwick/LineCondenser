@@ -29,15 +29,11 @@ namespace LineCondenser.WPF
             // The DataContext serves as the starting point of Binding Paths
             DataContext = _viewModel;
         }
-
-        public void TextChanged(object sender, TextChangedEventArgs args)
-        {
-        }
-
-        
+       
 
         private void CopyButton_Click(object sender, RoutedEventArgs e)
         {
+            Clipboard.SetText(_viewModel.OutputText);
         }
     }
 }

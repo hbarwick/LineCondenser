@@ -105,6 +105,7 @@ namespace LineCondenser.ViewModel
             if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                OutputText = ProcessText();
             }
         }
 
@@ -121,7 +122,7 @@ namespace LineCondenser.ViewModel
                 result += RightDelimiter;
                 result += Separator;
             }
-            result = result.Remove(result.Length - 1, Separator.Length);
+            result = result.Remove(result.Length - Separator.Length, Separator.Length);
             result += LineEnd;
             return result;
         }
