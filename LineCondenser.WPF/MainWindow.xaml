@@ -1,0 +1,43 @@
+﻿<Window x:Class="TextConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextConverter"
+        mc:Ignorable="d"
+        Title="Names" Height="556" Width="434">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="487*"/>
+            <RowDefinition Height="123*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="111*"/>
+                <ColumnDefinition Width="63*"/>
+                <ColumnDefinition Width="250*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Column="2" AcceptsReturn="True" HorizontalAlignment="Stretch" FontSize="15" TextWrapping="Wrap" Text="Paste&#x0a;Input&#x0a;Text&#x0a;Here" VerticalAlignment="Stretch" Margin="10,10,10,10" x:Name="textEntry"/>
+            <StackPanel Grid.Column="0">
+                <Label Height="33" Margin="0,10,0,0" FontSize="15">Left Delimiter</Label>
+                <Label Height="33" Margin="0,10,0,0" FontSize="15">Right Delimiter</Label>
+                <Label Height="33" Margin="0,10,0,0" FontSize="15">Separator</Label>
+                <Label Height="33" Margin="0,10,0,0" FontSize="15">Line Start</Label>
+                <Label Height="33" Margin="0,10,0,0" FontSize="15">Line End</Label>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text="'" VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" x:Name="leftDelimiter"/>
+                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text="'" VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" x:Name="rightDelimiter"/>
+                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text="," VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" x:Name="separator"/>
+                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text="(" VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" x:Name="lineStart"/>
+                <TextBox HorizontalAlignment="Center" Height="33" Margin="0,10,0,0" TextWrapping="Wrap" Text=")" VerticalAlignment="Top" Width="35" FontSize="20" TextAlignment="Center" x:Name="lineEnd"/>
+            </StackPanel>
+            <Button Grid.Row="1" Click="CopyButton_Click">Copy to Clipboard</Button>
+        </Grid>
+        <TextBox Text="" Grid.Row="2" x:Name="outputText"/>
+    </Grid>
+</Window>
