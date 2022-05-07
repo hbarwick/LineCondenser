@@ -21,18 +21,20 @@ namespace LineCondenser.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly TextConvertViewModel _viewModel;
         public MainWindow()
         {
             InitializeComponent();
-            TextConvertViewModel TextConverter = new TextConvertViewModel(leftDelimiter.Text, rightDelimiter.Text, separator.Text, lineStart.Text, lineEnd.Text, textEntry.Text);
-            outputText.Text = TextConverter.ProcessText();
-
+            _viewModel = new TextConvertViewModel();
+            // The DataContext serves as the starting point of Binding Paths
+            DataContext = _viewModel;
         }
 
         public void TextChanged(object sender, TextChangedEventArgs args)
         {
-            Console.WriteLine("Got one thing working");
         }
+
+        
 
         private void CopyButton_Click(object sender, RoutedEventArgs e)
         {

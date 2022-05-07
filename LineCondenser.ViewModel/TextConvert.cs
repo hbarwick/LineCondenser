@@ -1,34 +1,99 @@
 ﻿using System.ComponentModel;
+using LineCondenser.Model;
 
 namespace LineCondenser.ViewModel
 {
     public class TextConvertViewModel : INotifyPropertyChanged
     {
-        private string? leftDelimiter;
-        private string? RightDelimiter { get; set; }
-        private string? Separator { get; set; }
-        private string? LineStart { get; set; }
-        private string? LineEnd { get; set; }
-        private string? TextEntry { get; set; }
+        private TextConverter converter;
 
         public string LeftDelimiter
         {
-            get { return leftDelimiter; }
-            set { leftDelimiter = value ?? ""; }
+            get { return converter.LeftDelimiter ?? ""; }
+            set
+            {
+                if (converter.LeftDelimiter != value)
+                {
+                    converter.LeftDelimiter = value;
+                    OnPropertyChange("LeftDelimiter");
+                }
+            }
         }
-        
 
-        public TextConvertViewModel(string left, string right, string sep, string start, string end, string text)
+        public string RightDelimiter
         {
-            LeftDelimiter = left;
-            RightDelimiter = right; 
-            Separator = sep;
-            LineStart = start;
-            LineEnd = end;
-            TextEntry = text;
+            get { return converter.RightDelimiter; }
+            set
+            {
+                if (converter.RightDelimiter != value)
+                {
+                    converter.RightDelimiter = value;
+                    OnPropertyChange("RightDelimiter");
+                }
+            }
+        }
+
+        public string Separator
+        {
+            get { return converter.Separator; }
+            set
+            {
+                if (converter.Separator != value)
+                {
+                    converter.Separator = value;
+                    OnPropertyChange("Separator");
+                }
+            }
+        }
+
+        public string LineStart
+        {
+            get { return converter.LineStart; }
+            set
+            {
+                if (converter.LineStart != value)
+                {
+                    converter.LineStart = value;
+                    OnPropertyChange("LineStart");
+                }
+            }
+        }
+
+        public string LineEnd
+        {
+            get { return converter.LineEnd; }
+            set
+            {
+                if (converter.LineEnd != value)
+                {
+                    converter.LineEnd = value;
+                    OnPropertyChange("LineEnd");
+                }
+            }
+        }
+
+        public string TextEntry
+        {
+            get { return converter.TextEntry; }
+            set
+            {
+                if (converter.TextEntry != value)
+                {
+                    converter.TextEntry = value;
+                    OnPropertyChange("TextEntry");
+                }
+            }
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
+
+        protected void OnPropertyChange(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
 
         public string ProcessText()
         {
