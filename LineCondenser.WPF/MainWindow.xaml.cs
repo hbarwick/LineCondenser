@@ -26,7 +26,6 @@ namespace LineCondenser.WPF
         {
             InitializeComponent();
             _viewModel = new TextConvertViewModel();
-            // The DataContext serves as the starting point of Binding Paths
             DataContext = _viewModel;
         }
        

@@ -111,8 +111,7 @@ namespace LineCondenser.ViewModel
 
         public string ProcessText()
         {
-            string[] lines = TextEntry.Split(new string[] { "\r\n", "\r", "\n" },
-                StringSplitOptions.None);
+            string[] lines = TextEntry.Split(new string[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
             var result = "";
             result += LineStart;
             foreach (string line in lines)

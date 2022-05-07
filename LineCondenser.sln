@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LineCondenser.WPF", "LineCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LineCondenser.ViewModel", "LineCondenser.ViewModel\LineCondenser.ViewModel.csproj", "{ECD732A9-9236-46BA-B82C-88170E03DC82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineCondenser.Model", "LineCondenser.Model\LineCondenser.Model.csproj", "{48BED4EE-65F1-4DE6-87D4-71366C4DE729}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LineCondenser.Model", "LineCondenser.Model\LineCondenser.Model.csproj", "{48BED4EE-65F1-4DE6-87D4-71366C4DE729}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7F3424D5-BD42-49FC-93E4-45A2B3B56708}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
