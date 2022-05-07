@@ -28,7 +28,6 @@ namespace LineCondenser.WPF
             _viewModel = new TextConvertViewModel();
             DataContext = _viewModel;
         }
-       
 
         private void CopyButton_Click(object sender, RoutedEventArgs e)
         {

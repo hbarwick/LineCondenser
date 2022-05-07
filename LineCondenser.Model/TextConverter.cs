@@ -20,7 +20,5 @@
             TextEntry = "Paste\nInput\nText\nHere!";
             OutputText = "";
         }
-
-
     }
 }
