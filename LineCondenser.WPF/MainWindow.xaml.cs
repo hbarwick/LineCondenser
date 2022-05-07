@@ -24,14 +24,15 @@ namespace LineCondenser.WPF
         public MainWindow()
         {
             InitializeComponent();
-            TextConvertViewModel Converter = new TextConvertViewModel(leftDelimiter.Text, rightDelimiter.Text, separator.Text, lineStart.Text, lineEnd.Text, textEntry.Text);
+            TextConvertViewModel TextConverter = new TextConvertViewModel(leftDelimiter.Text, rightDelimiter.Text, separator.Text, lineStart.Text, lineEnd.Text, textEntry.Text);
+            outputText.Text = TextConverter.ProcessText();
+
         }
 
 
 
         private void CopyButton_Click(object sender, RoutedEventArgs e)
         {
-            //Converter.ProcessText();
         }
     }
 }

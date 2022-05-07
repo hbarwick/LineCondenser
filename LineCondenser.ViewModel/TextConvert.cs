@@ -25,13 +25,20 @@ namespace LineCondenser.ViewModel
 
         public string ProcessText()
         {
-            throw new NotImplementedException();
-            //string[] lines = TextEntry.Split
-
-            //string result;
-
-
-            //return result;
+            string[] lines = TextEntry.Split(new string[] { "\r\n", "\r", "\n" },
+                StringSplitOptions.None);
+            var result = "";
+            result += LineStart;
+            foreach (string line in lines)
+            {
+                result += LeftDelimiter;
+                result += line;
+                result += RightDelimiter;
+                result += Separator;
+            }
+            result = result.Remove(result.Length - 1, Separator.Length);
+            result += LineEnd;
+            return result;
         }
     }
 }
