@@ -5,11 +5,11 @@ namespace LineCondenser.ViewModel
 {
     public class TextConvertViewModel : INotifyPropertyChanged
     {
-        private TextConverter converter;
+        private TextConverter converter = new TextConverter();
 
         public string LeftDelimiter
         {
-            get { return converter.LeftDelimiter ?? ""; }
+            get { return converter.LeftDelimiter; }
             set
             {
                 if (converter.LeftDelimiter != value)
@@ -81,6 +81,19 @@ namespace LineCondenser.ViewModel
                 {
                     converter.TextEntry = value;
                     OnPropertyChange("TextEntry");
+                }
+            }
+        }
+
+        public string OutputText
+        {
+            get { return ProcessText(); }
+            set
+            {
+                if (converter.OutputText != value)
+                {
+                    converter.OutputText = value;
+                    OnPropertyChange("OutputText");
                 }
             }
         }
