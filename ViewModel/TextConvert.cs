@@ -16,7 +16,7 @@ namespace LineCondenser.ViewModel
                 if (converter.LeftDelimiter != value)
                 {
                     converter.LeftDelimiter = value;
-                    OnPropertyChange("LeftDelimiter");
+                    OnPropertyChange(nameof(LeftDelimiter));
                 }
             }
         }
@@ -29,7 +29,7 @@ namespace LineCondenser.ViewModel
                 if (converter.RightDelimiter != value)
                 {
                     converter.RightDelimiter = value;
-                    OnPropertyChange("RightDelimiter");
+                    OnPropertyChange(nameof(RightDelimiter));
                 }
             }
         }
@@ -42,7 +42,7 @@ namespace LineCondenser.ViewModel
                 if (converter.Separator != value)
                 {
                     converter.Separator = value;
-                    OnPropertyChange("Separator");
+                    OnPropertyChange(nameof(Separator));
                 }
             }
         }
@@ -55,7 +55,7 @@ namespace LineCondenser.ViewModel
                 if (converter.LineStart != value)
                 {
                     converter.LineStart = value;
-                    OnPropertyChange("LineStart");
+                    OnPropertyChange(nameof(LineStart));
                 }
             }
         }
@@ -68,7 +68,7 @@ namespace LineCondenser.ViewModel
                 if (converter.LineEnd != value)
                 {
                     converter.LineEnd = value;
-                    OnPropertyChange("LineEnd");
+                    OnPropertyChange(nameof(LineEnd));
                 }
             }
         }
@@ -81,7 +81,7 @@ namespace LineCondenser.ViewModel
                 if (converter.TextEntry != value)
                 {
                     converter.TextEntry = value;
-                    OnPropertyChange("TextEntry");
+                    OnPropertyChange(nameof(TextEntry));
                 }
             }
         }
@@ -94,7 +94,7 @@ namespace LineCondenser.ViewModel
                 if (converter.OutputText != value)
                 {
                     converter.OutputText = value;
-                    OnPropertyChange("OutputText");
+                    OnPropertyChange(nameof(OutputText));
                 }
             }
         }
